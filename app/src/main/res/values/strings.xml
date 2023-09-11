@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TimeScheduler</string>
+    <string name="started_subtitle">
+        Welcome To Time Scheduler,Please
+        <br><b>Login</b>Already have an account</br>
+        <br><b>Register</b>To get Started</br>
+    </string>
+    <string name="login_title">
+        Login To App
+    </string>
+    <string name="login_subtitle">
+        <font color="#00C9B8"><b>Login</b></font>
+        if you already have an account
+    </string>
+    <string name="login_email">
+        Username or Email
+    </string>
+    <string name="login_not">
+        I don\'t have an Account
+        <font color="#00C9B8"><b>Register</b></font>
+    </string>
+    <string name="Register_subtitle">
+        <font color="#00C9B8"><b>Register</b></font>
+        To get started with the App
+    </string>
+    <string name="register_haven_account">
+        I already have an Account
+        <font color="#00C9B8"><b>Login</b></font>
+    </string>
+</resources>
