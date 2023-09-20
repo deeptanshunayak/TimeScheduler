@@ -12,7 +12,7 @@ class LoginActivity : AppCompatActivity() {
         binding=ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.btnLogin.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,SectionActivity::class.java))
         }
         binding.HaveAcoount.setOnClickListener{
             startActivity(Intent(this,Register_Activity::class.java))

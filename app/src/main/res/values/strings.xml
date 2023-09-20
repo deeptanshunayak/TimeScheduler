@@ -27,4 +27,7 @@
         I already have an Account
         <font color="#00C9B8"><b>Login</b></font>
     </string>
+    <string name="label_1">BTECH CSE 5A</string>
+    <string name="label_2">BTECH CSE 5B</string>
+    <string name="label_3">BTECH CSE 5C</string>
 </resources>
