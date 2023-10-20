@@ -74,7 +74,7 @@
         android:id="@+id/forget_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Forget Password"
+        android:text="Forgot Password"
         android:textColor="@color/primary_color"
         android:textStyle="bold"
         android:textAlignment="textEnd"
