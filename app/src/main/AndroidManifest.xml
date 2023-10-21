@@ -13,9 +13,17 @@
         android:theme="@style/Theme.TimeScheduler"
         tools:targetApi="31">
         <activity
+            android:name=".SyllabusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TimeTable2"
+            android:exported="false" />
+        <activity
+            android:name=".TimeTable1"
+            android:exported="false" />
+        <activity
             android:name=".TimeTable"
             android:exported="false" />
-
         <activity
             android:name=".SectionActivity"
             android:exported="false" />
