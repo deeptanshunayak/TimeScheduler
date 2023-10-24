@@ -29,6 +29,12 @@ class SectionActivity : AppCompatActivity() {
                 startActivity(Intent(this,TimeTable2::class.java))
             }
         }
+        binding.btnTab.setOnClickListener{
+            startActivity(Intent(this,Notification::class.java))
+        }
+        binding.btnSyllabus.setOnClickListener{
+            startActivity(Intent(this,SyllabusActivity::class.java))
+        }
     }
 
 }

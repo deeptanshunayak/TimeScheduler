@@ -75,6 +75,7 @@
             android:textColor="@color/Gray"
             android:textSize="14sp" />
     </RadioGroup>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_syllabus"
         style="@style/ButtonGreen"
@@ -83,12 +84,13 @@
 
         android:text="VIEW SYLLABUS"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_timetable"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintHorizontal_bias="0.641"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintBottom_toTopOf="@id/btn_timetable"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintVertical_bias="0.506" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_timetable"
         style="@style/ButtonGreen"
@@ -98,9 +100,23 @@
         android:text="VIEW TIMETABLE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.639"
+        app:layout_constraintHorizontal_bias="0.641"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintVertical_bias="0.474" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_tab"
+        style="@style/ButtonGreen"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+
+        android:text="SCHEDULE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_timetable"
+        app:layout_constraintVertical_bias="0.542" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
