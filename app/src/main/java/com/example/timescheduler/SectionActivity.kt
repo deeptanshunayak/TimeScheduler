@@ -21,12 +21,12 @@ class SectionActivity : AppCompatActivity() {
         }
         findViewById<RadioButton>(R.id.radio_button_2).setOnCheckedChangeListener { buttonView, isChecked ->
             binding.btnTimetable.setOnClickListener{
-                startActivity(Intent(this,TimeTable1::class.java))
+                startActivity(Intent(this,TimeTable2::class.java))
             }
         }
         findViewById<RadioButton>(R.id.radio_button_3).setOnCheckedChangeListener { buttonView, isChecked ->
             binding.btnTimetable.setOnClickListener{
-                startActivity(Intent(this,TimeTable2::class.java))
+                startActivity(Intent(this,TimeTable1::class.java))
             }
         }
         binding.btnTab.setOnClickListener{
