@@ -14,7 +14,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.btnLogin.setOnClickListener {
 
-            startActivity(Intent(this,SectionActivity::class.java))
+            startActivity(Intent(this,HomePage::class.java))
         }
         binding.HaveAcoount.setOnClickListener{
             startActivity(Intent(this,Register_Activity::class.java))

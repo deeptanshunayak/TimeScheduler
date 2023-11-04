@@ -33,7 +33,7 @@ class SectionActivity : AppCompatActivity() {
             startActivity(Intent(this,Notification::class.java))
         }
         binding.btnSyllabus.setOnClickListener{
-            startActivity(Intent(this,SyllabusActivity::class.java))
+            startActivity(Intent(this,ClassNotes::class.java))
         }
     }
 
