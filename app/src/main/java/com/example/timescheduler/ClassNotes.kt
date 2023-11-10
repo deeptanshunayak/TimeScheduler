@@ -1,40 +1,32 @@
 package com.example.timescheduler
-
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
+import android.service.controls.actions.FloatAction
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ListView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class ClassNotes : AppCompatActivity() {
+class ClassNotes: AppCompatActivity() {
 
-    private lateinit var editText: EditText
-    private lateinit var addButton: Button
-    private lateinit var noteList: ListView
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var fab:FloatingActionButton
 
-    private val notes = ArrayList<String>()
-
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        editText = findViewById(R.id.editText)
-        addButton = findViewById(R.id.addButton)
-        noteList = findViewById(R.id.noteList)
-
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, notes)
-        noteList.adapter = adapter
-
-        addButton.setOnClickListener {
-            val noteText = editText.text.toString()
-            if (noteText.isNotEmpty()) {
-                notes.add(noteText)
-                adapter.notifyDataSetChanged()
-                editText.text.clear()
-            }
+        setContentView(R.layout.activity_class_notes)
+        recyclerView=findViewById(R.id.recyclerView)
+        fab=findViewById(R.id.fab)
+        fab.setOnClickListener {
+         val intent=Intent(this,AddNotes::class.java)
+            startActivity(intent)
         }
+
+
     }
+
+
+
 }
