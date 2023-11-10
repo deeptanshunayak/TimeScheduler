@@ -1,13 +1,71 @@
 {
   "project_info": {
-    "project_number": "409879589469",
-    "project_id": "time-d8bbb",
-    "storage_bucket": "time-d8bbb.appspot.com"
+    "project_number": "618829241057",
+    "firebase_url": "https://mr-admn-default-rtdb.firebaseio.com",
+    "project_id": "mr-admn",
+    "storage_bucket": "mr-admn.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:409879589469:android:38454b9a2baef1ff0d53b4",
+        "mobilesdk_app_id": "1:618829241057:android:a1e6d87f63ca2babe735a0",
+        "android_client_info": {
+          "package_name": "com.example.admin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlqYRsLjxLc0Dc8KEPliJr-102z7XWB7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618829241057:android:cb5b9f029f680842e735a0",
+        "android_client_info": {
+          "package_name": "com.example.mr_admn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlqYRsLjxLc0Dc8KEPliJr-102z7XWB7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618829241057:android:44514c54247798c2e735a0",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlqYRsLjxLc0Dc8KEPliJr-102z7XWB7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618829241057:android:c34ab3ce3b8ee671e735a0",
         "android_client_info": {
           "package_name": "com.example.timescheduler"
         }
@@ -15,7 +73,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAesWF2sftKJD5UBlhYgkzfTTzc6TGVWnI"
+          "current_key": "AIzaSyDlqYRsLjxLc0Dc8KEPliJr-102z7XWB7o"
         }
       ],
       "services": {

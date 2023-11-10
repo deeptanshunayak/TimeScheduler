@@ -21,6 +21,7 @@ class ClassNotes: AppCompatActivity() {
         fab=findViewById(R.id.fab)
         fab.setOnClickListener {
          val intent=Intent(this,AddNotes::class.java)
+
             startActivity(intent)
         }
 
