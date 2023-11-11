@@ -8,6 +8,7 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.example.timescheduler.databinding.ActivityLoginBinding
 import com.example.timescheduler.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -26,26 +27,49 @@ class Register_Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        firebaseAuth= FirebaseAuth.getInstance()
-        binding.btnRegister.setOnClickListener {
-            val em=binding.etEmail.text.toString()
-            val ps=binding.etPassword.text.toString()
-            firebaseAuth.createUserWithEmailAndPassword(em, ps)
-            ischecked=checkAllFields()
-
-            if(ischecked) {
-
-                startActivity(Intent(this, LoginActivity::class.java))
-            }}
-
-        binding.HavenAcoount.setOnClickListener{
-            startActivity(Intent(this,LoginActivity::class.java))
-        }
         bproceed=findViewById(R.id.btn_register)
         name=findViewById(R.id.et_fullname)
         email1=findViewById(R.id.et_email)
         uname=findViewById(R.id.et_username)
         password=findViewById(R.id.et_password)
+        firebaseAuth= FirebaseAuth.getInstance()
+        binding.btnRegister.setOnClickListener {
+            val em=binding.etEmail.text.toString()
+            val ps=binding.etPassword.text.toString()
+
+           if(name!!.length()==0){
+
+               Toast.makeText(this,"NAME IS REQUIRED",Toast.LENGTH_SHORT).show()
+           }
+            else if(email1!!.length()==0){
+               Toast.makeText(this,"EMAIL IS REQUIRED",Toast.LENGTH_SHORT).show()
+           }
+           else if(uname!!.length()==0){
+               Toast.makeText(this,"USERNAME IS REQUIRED",Toast.LENGTH_SHORT).show()
+           }
+           else if(password!!.length()==0){
+               Toast.makeText(this,"PASSWORD IS REQUIRED",Toast.LENGTH_SHORT).show()
+           }
+
+            else{
+               firebaseAuth.createUserWithEmailAndPassword(em, ps).addOnCompleteListener {
+                   if(it.isSuccessful){
+                       val intent = Intent(this,LoginActivity::class.java)
+                       startActivity(intent)
+                   }
+                   else{
+                       Toast.makeText(this,it.exception.toString(),Toast.LENGTH_SHORT).show()
+                   }
+               }
+
+           }
+
+        }
+
+        binding.HavenAcoount.setOnClickListener{
+            startActivity(Intent(this,LoginActivity::class.java))
+        }
+
     }
     private fun checkAllFields(): Boolean {
         if (name!!.length() == 0) {
