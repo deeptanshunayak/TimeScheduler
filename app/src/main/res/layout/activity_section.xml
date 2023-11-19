@@ -33,7 +33,7 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="330dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:checkedButton="@+id/radio_button_1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,44 +79,31 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_syllabus"
         style="@style/ButtonGreen"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:layout_width="361dp"
+        android:layout_height="47dp"
 
         android:text="VIEW SYLLABUS"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@id/btn_timetable"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintHorizontal_bias="0.66"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.506" />
+        app:layout_constraintVertical_bias="0.687" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_timetable"
         style="@style/ButtonGreen"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:layout_width="362dp"
+        android:layout_height="49dp"
 
         android:text="VIEW TIMETABLE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintHorizontal_bias="0.673"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        app:layout_constraintVertical_bias="0.474" />
+        app:layout_constraintVertical_bias="0.598" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_tab"
-        style="@style/ButtonGreen"
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-
-        android:text="SCHEDULE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_timetable"
-        app:layout_constraintVertical_bias="0.542" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,28 +6,42 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.timescheduler.databinding.ActivityClassNotesBinding
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import dagger.hilt.android.AndroidEntryPoint
+
 
 class ClassNotes: AppCompatActivity() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var fab:FloatingActionButton
+    private lateinit var binding:ActivityClassNotesBinding
+    private lateinit var db:NoteDatabaseHelper
+    private lateinit var notesAdapter: NotesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_class_notes)
-        recyclerView=findViewById(R.id.recyclerView)
-        fab=findViewById(R.id.fab)
-        fab.setOnClickListener {
-         val intent=Intent(this,AddNotes::class.java)
-
+        binding=ActivityClassNotesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        db= NoteDatabaseHelper(this)
+        notesAdapter= NotesAdapter(db.getallNotes(),this)
+        binding.notesRecyclerView.layoutManager=LinearLayoutManager(this)
+        binding.notesRecyclerView.adapter=notesAdapter
+        binding.addButton.setOnClickListener {
+            val intent = Intent(this,AddNotes::class.java)
             startActivity(intent)
         }
 
 
     }
 
+    override fun onResume() {
+        super.onResume()
+        notesAdapter.refreshData(db.getallNotes())
+    }
 
 
 }

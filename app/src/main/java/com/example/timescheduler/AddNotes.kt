@@ -5,25 +5,27 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
+import com.example.timescheduler.databinding.ActivityAddNotesBinding
 
 class AddNotes : AppCompatActivity() {
-    private lateinit var noteEditText: EditText
-    private lateinit var addnoteButton: Button
-    private lateinit var noteDo: NoteDo
+    private lateinit var binding:ActivityAddNotesBinding
+    private lateinit var db:NoteDatabaseHelper
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_notes)
-        noteEditText = findViewById(R.id.notesEditText)
-        addnoteButton=findViewById(R.id.notesbutton)
-        noteDo=NoteDo()
-        addnoteButton.setOnClickListener {
-            val note = noteEditText.text.toString()
-            if(note.isNotEmpty()){
-                noteDo.addnote(note)
-                val intent = Intent(this,ClassNotes::class.java)
-                startActivity(intent)
-            }
+        binding=ActivityAddNotesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        db= NoteDatabaseHelper(this)
+        binding.save.setOnClickListener {
+            val title = binding.editText.text.toString()
+            val content = binding.contentEditText.text.toString()
+            val note = Noter(0,title,content)
+            db.insert(note)
+            finish()
+            Toast.makeText(this,"Note Saved",Toast.LENGTH_SHORT).show()
+        }
+
         }
 
     }
-}
